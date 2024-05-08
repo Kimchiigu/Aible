@@ -12,7 +12,7 @@
         @include('/partials/navbar')
     </header>
 
-    <div class="container p-4 flex items-center justify-center flex-col">
+    <div class="container p-4 flex items-center flex-col min-h-screen min-w-screen gap-10">
         @yield('container')
     </div>
 
