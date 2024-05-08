@@ -8,6 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body style="background-color: rgb(26, 52, 71); font-family: Arial, Helvetica, sans-serif">
+    <h1>TEST 1</h1>
     <div class="bg-white relative lg:py-20">
         <div class="flex flex-col items-center justify-between pt-0 pr-10 pb-0 pl-10 mt-0 mr-auto mb-0 ml-auto max-w-7xl
             xl:px-5 lg:flex-row">
