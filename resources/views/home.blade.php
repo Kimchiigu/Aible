@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aible</title>
+    <title>Aible | Home</title>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     @vite('resources/css/app.css')
 </head>
@@ -61,7 +61,7 @@
                                     </svg>
                                     <span class="w-fit block mx-auto text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-pink-600 dark:from-blue-400 dark:to-pink-400">100%</span>
                                 </div>
-                                <h2 class="mt-6 text-center font-semibold text-gray-950 dark:text-white text-3xl">Customizable</h2>
+                                <h2 class="mt-6 text-center font-semibold text-gray-950 dark:text-white text-3xl">User Friendly</h2>
                             </div>
                         </div>
                         <div class="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8 rounded-xl bg-white border border-gray-200 dark:border-gray-800 dark:bg-gray-900">
