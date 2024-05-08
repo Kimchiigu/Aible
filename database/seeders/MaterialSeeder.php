@@ -16,8 +16,10 @@ class MaterialSeeder extends Seeder
      */
     public function run()
     {
+        $title = Str::random(8);
         DB::table('materials')->insert([
-            'title' => Str::random(8),
+            'title' => $title,
+            'slug' => Str::slug(strtolower($title), '_'),
             'excerpt' => Str::random(15),
             'body' => Str::random(40),
             'src' => "assets/images/dummy.jpg"

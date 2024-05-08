@@ -13,4 +13,11 @@ class MaterialController extends Controller
             "materials" => Material::all()
         ]);
     }
+
+    public function show(Material $material){
+        return view('material', [
+            "title" => $material->title,
+            "material" => $material
+        ]);
+    }
 }

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Material extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'excerpt', 'body', 'src'];
+    protected $fillable = ['title', 'slug', 'excerpt', 'body', 'src'];
 }

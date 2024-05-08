@@ -35,3 +35,4 @@ Route::get('/login', function () {
 Route::post('/login/auth', [UserController::class, 'authLogin'])->name('authLogin');
 
 Route::get('/training', [MaterialController::class, 'index']);
+Route::get('/training/{material:slug}', [MaterialController::class, 'show']);
