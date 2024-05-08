@@ -5,8 +5,11 @@
         <div  class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
             <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
                 <div class="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
-                    <h1 class="text-4xl text-gray-700 font-bold md:text-4xl">Equal <span class="text-blue-500">Lives</span></h1>
-                    <h1 class="text-4xl text-gray-700 font-bold md:text-4xl">Equal <span class="text-blue-500">Experience</span></h1>
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-4xl text-gray-700 font-bold lg:text-5xl xl:text-6xl">Equal <span class="text-blue-500">Lives</span></h1>
+                        <h1 class="text-4xl text-gray-700 font-bold lg:text-5xl xl:text-6xl">Equal <span class="text-blue-500">Experience</span></h1>
+                    </div>
+
 
                     <p class="text-xl text-black">Welcome to AI.BLE, designed to facilitate comfortable communication for individuals facing speech or hearing difficulties. Interact seamlessly, especially during interviews, ensuring equal experiences for all.</p>
 

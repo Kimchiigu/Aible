@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Lorem;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -20,8 +21,8 @@ class MaterialSeeder extends Seeder
         DB::table('materials')->insert([
             'title' => $title,
             'slug' => Str::slug(strtolower($title), '_'),
-            'excerpt' => Str::random(15),
-            'body' => Str::random(40),
+            'excerpt' => Lorem::ipsumWords(15),
+            'body' => Lorem::ipsumParagraph(5),
             'src' => "assets/images/dummy.jpg"
         ]);
     }
