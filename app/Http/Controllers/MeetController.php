@@ -12,10 +12,7 @@ class MeetController extends Controller
         $basePath = base_path();
 
         $pythonScriptPath = $basePath . '/resources/python/run.py';
-
-        shell_exec('python -u '. $pythonScriptPath);
-
-        // shell_exec("python -u ".$pythonScriptPath);
+        shell_exec("python ".$pythonScriptPath);
 
         return view('meet', [
             'title' => "Register"
