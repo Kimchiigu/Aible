@@ -11,13 +11,12 @@ class MeetController extends Controller
     public function startPython(){
         $basePath = base_path();
 
-        $pythonScriptPath = $basePath . '/resources/python/camera.py';
-        $process = new Process(['python', $pythonScriptPath]);
-        $process->run();
+        $pythonScriptPath = $basePath . '/resources/python/run.py';
 
-        if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
-        }
+        shell_exec('python -u '. $pythonScriptPath);
+
+        // shell_exec("python -u ".$pythonScriptPath);
+
         return view('meet', [
             'title' => "Register"
         ]);

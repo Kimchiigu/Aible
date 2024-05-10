@@ -60,11 +60,11 @@
 
 initializeWebcam();
 setInterval(captureAndSendFrame, 50);
-    window.addEventListener('beforeunload', function (e) {
-        fetch('/cancel-python-execution', {
-            method: 'POST',
-        });
-    });
+    // window.addEventListener('beforeunload', function (e) {
+    //     fetch('/cancel-python-execution', {
+    //         method: 'POST',
+    //     });
+    // });
     </script>
 </body>
 </html>
