@@ -23,4 +23,10 @@ class PageController extends Controller
             'title' => "Login"
         ]);
     }
+
+    public function viewMeet(){
+        return view('meet', [
+            'title' => "Meeting"
+        ]);
+    }
 }

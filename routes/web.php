@@ -27,3 +27,5 @@ Route::post('/login/auth', [UserController::class, 'authLogin'])->name('authLogi
 
 Route::get('/training', [MaterialController::class, 'index']);
 Route::get('/training/{material:slug}', [MaterialController::class, 'show']);
+
+Route::get('/meet', [PageController::class, 'viewMeet']);
