@@ -3,6 +3,7 @@
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MeetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +29,5 @@ Route::post('/login/auth', [UserController::class, 'authLogin'])->name('authLogi
 Route::get('/training', [MaterialController::class, 'index']);
 Route::get('/training/{material:slug}', [MaterialController::class, 'show']);
 
-Route::get('/meet', [PageController::class, 'viewMeet']);
+Route::get('/meet', [MeetController::class, 'startPython']);
+Route::post('/cancel-python-execution', [MeetController::class, 'cancelExecution']);
