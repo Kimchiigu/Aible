@@ -23,14 +23,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'viewHome']);
 Route::get('/home', [HomeController::class, 'viewHome']);
 
-Route::get('/register', [RegisterController::class, 'viewRegister']);
-Route::post('/register', [RegisterController::class, 'registerUser'])->name('register');
 
-Route::get('/login', [LoginController::class, 'viewLogin']);
-Route::post('/login/auth', [UserController::class, 'authLogin'])->name('authLogin');
 
 Route::get('/training', [MaterialController::class, 'index']);
 Route::get('/training/{material:slug}', [MaterialController::class, 'show']);
+
+Route::group(['middleware' => 'guest'], function(){
+    Route::get('/register', [RegisterController::class, 'viewRegister'])->name('register');
+    Route::post('/register', [RegisterController::class, 'registerUser'])->name('register');
+
+    Route::get('/login', [LoginController::class, 'viewLogin'])->name('login');
+    Route::post('/login', [LoginController::class, 'loginUser'])->name('login');
+});
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::delete('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
 Route::get('/meet', [MeetController::class, 'startPython']);
 Route::post('/cancel-python-execution', [MeetController::class, 'cancelExecution']);

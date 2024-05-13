@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function authRegister(Request $request) 
+    public function authRegister(Request $request)
     {
         $user = User::create([
             'name' => $request->TxtName,
