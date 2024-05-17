@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webcam Capture</title>
+    @vite('resources/css/app.css')
 </head>
 <body>
     <video id="videoElement" autoplay></video>
     <canvas id="canvas" style="display:none;"></canvas>
-    <p id="label"></p>
+    <p id="label" class="text-9xl font-bold bg-red'"></p>
     <p id="confidence"></p>
     <script>
         // Function to initialize webcam feed
