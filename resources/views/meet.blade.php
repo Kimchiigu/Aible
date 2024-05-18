@@ -7,10 +7,12 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <video id="videoElement" autoplay></video>
-    <canvas id="canvas" style="display:none;"></canvas>
-    <p id="label" class="text-9xl font-bold bg-red'"></p>
-    <p id="confidence"></p>
+    <div class="flex flex-column">
+        <video id="videoElement" autoplay class="ml-5"></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+        <p id="label" class="text-9xl font-bold bg-red'"></p>
+        <p id="confidence"></p>
+    </div>
     <script>
         // Function to initialize webcam feed
         function initializeWebcam() {
