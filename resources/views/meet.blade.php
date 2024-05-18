@@ -6,11 +6,18 @@
     <title>Webcam Capture</title>
     @vite('resources/css/app.css')
 </head>
-<body>
-    <video id="videoElement" autoplay></video>
-    <canvas id="canvas" style="display:none;"></canvas>
-    <p id="label" class="text-9xl font-bold bg-red'"></p>
-    <p id="confidence"></p>
+<body class="bg-gradient-to-r from-violet-200 to-pink-200">
+
+        <video id="videoElement" autoplay class="border-s-amber-500"></video>
+        <canvas id="canvas" class="border-s-amber-500" style="display:none;"></canvas>
+        <div class="flex flex-row">
+            <h1>Subtitles : </h1>
+            <p id="label" class="text-9xl font-bold "></p>
+        </div>
+        <div class="flex flex-row">
+            <h1>CF Level : </h1>
+            <p id="confidence"></p>
+        </div>
     <script>
         // Function to initialize webcam feed
         function initializeWebcam() {
