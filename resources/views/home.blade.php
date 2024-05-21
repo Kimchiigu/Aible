@@ -16,13 +16,13 @@
                 </div>
                 <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
                     <div class="col-span-2 row-span-4">
-                        <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/kushagra.webp" class="rounded-full" width="640" height="960" alt="shoes" loading="lazy">
+                        <img src="{{ asset('assets/images/home2.jpg') }}" class="rounded-full" width="640" height="960" alt="shoes" loading="lazy">
                     </div>
                     <div class="col-span-2 row-span-2">
-                        <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/iman.webp" class="w-full h-full object-cover object-top rounded-xl" width="640" height="640" alt="shoe" loading="lazy">
+                        <img src="{{ asset('assets/images/home3.jpg') }}" class="w-full h-full object-cover object-top rounded-xl" width="640" height="640" alt="shoe" loading="lazy">
                     </div>
                     <div class="col-span-3 row-span-3">
-                        <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/daniel.webp" class="w-full h-full object-cover object-top rounded-xl" width="640" height="427" alt="shoes" loading="lazy">
+                        <img src="{{ asset('assets/images/home1.png') }}" class="w-full h-full object-cover object-top rounded-xl" width="640" height="427" alt="shoes" loading="lazy">
                     </div>
                 </div>
             </div>
