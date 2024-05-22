@@ -6,16 +6,16 @@
     <title>Webcam Capture</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gradient-to-r from-violet-200 to-pink-200">
-
-        <video id="videoElement" autoplay class="border-s-amber-500"></video>
+<body class="flex flex-col justify-center align-middle">
+        <div class="text-center font-bold mt-10 text-4xl mb-4">AIBLE</div>
+        <video id="videoElement" autoplay class="h-96"></video>
         <canvas id="canvas" class="border-s-amber-500" style="display:none;"></canvas>
         <div class="flex flex-row">
-            <h1>Subtitles : </h1>
+            <h1 class="mx-24 font-bold text-3xl">Subtitles : </h1>
             <p id="label" class="text-9xl font-bold "></p>
         </div>
         <div class="flex flex-row">
-            <h1>CF Level : </h1>
+            <h1 class="mx-24 font-bold text-3xl mt-10">CF Level : </h1>
             <p id="confidence"></p>
         </div>
     <script>
