@@ -103,10 +103,10 @@ def classify_image(image_data, result_queue):
     response = requests.post(api_url, headers=headers, data=image_data)
 
     result = response.json()
-    prediction = max(result["predictions"], key=lambda x: x["probability"])
-    label = prediction["tagName"]
-    image = cv2.imdecode(np.frombuffer(image_data, np.uint8), -1)
-    cv2.imwrite(f'{label}_{time.time()}.jpg', image)
+    # prediction = max(result["predictions"], key=lambda x: x["probability"])
+    # label = prediction["tagName"]
+    # image = cv2.imdecode(np.frombuffer(image_data, np.uint8), -1)
+    # cv2.imwrite(f'{label}_{time.time()}.jpg', image)
 
     api_in_progress = False
     result_queue.put(result)
