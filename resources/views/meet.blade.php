@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webcam Capture</title>
     @vite('resources/css/app.css')
+
 </head>
-<body class="flex flex-col justify-center align-middle">
-        <div class="text-center font-bold mt-10 text-4xl mb-4">AIBLE</div>
-        <video id="videoElement" autoplay class="h-96"></video>
-        <canvas id="canvas" class="border-s-amber-500" style="display:none;"></canvas>
-        <div class="flex flex-row">
-            <h1 class="mx-24 font-bold text-3xl">Subtitles : </h1>
-            <p id="label" class="text-9xl font-bold "></p>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div class="text-center">
+        <div class="text-4xl font-bold mt-0 mb-4">AIBLE</div>
+        <video id="videoElement" autoplay class="h-96 w-full max-w-4xl mx-auto border-2 border-gray-300 rounded-md shadow-md"></video>
+        <canvas id="canvas" class="hidden border-s-amber-500"></canvas>
+
+        <div class="mt-8">
+            <h1 class="text-3xl font-bold mb-2">Subtitles: AIBLE</h1>
+            <p id="label" class="text-4xl font-bold text-gray-800"></p>
         </div>
-        <div class="flex flex-row">
-            <h1 class="mx-24 font-bold text-3xl mt-10">CF Level : </h1>
-            <p id="confidence"></p>
+
+        <div class="mt-8 flex justify-center">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">Mute</button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2">Close Video</button>
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-2">Chat</button>
         </div>
+    </div>
     <script>
         // Function to initialize webcam feed
         function initializeWebcam() {
