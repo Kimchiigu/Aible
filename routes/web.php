@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JobsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\PageController;
@@ -23,8 +24,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'viewHome']);
 Route::get('/home', [HomeController::class, 'viewHome']);
 
-
-
 Route::get('/training', [MaterialController::class, 'index']);
 Route::get('/training/{material:slug}', [MaterialController::class, 'show']);
 
@@ -42,3 +41,5 @@ Route::group(['middleware' => 'auth'], function(){
 
 Route::get('/meet', [MeetController::class, 'startPython']);
 Route::post('/cancel-python-execution', [MeetController::class, 'cancelExecution']);
+
+Route::get('/jobs', [JobsController::class, 'viewJobs']);

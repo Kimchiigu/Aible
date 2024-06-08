@@ -23,7 +23,7 @@ class MaterialSeeder extends Seeder
             'slug' => Str::slug(strtolower($title), '_'),
             'excerpt' => Lorem::ipsumWords(15),
             'body' => Lorem::ipsumParagraph(5),
-            'src' => "assets/images/dummy.jpg"
+            'src' => "assets/images/imgnotfound.jpg"
         ]);
     }
 }
