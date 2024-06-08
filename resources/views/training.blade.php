@@ -29,7 +29,7 @@
                         <div class="flex items-center justify-between mt-4">
                             <div>
                                 <a href="#" class="text-lg font-medium text-gray-700 hover:underline hover:text-gray-500">
-                                    Aurelia Puspita, Marketing Lead
+                                    Information Technology
                                 </a>
 
                                 <p class="text-sm text-gray-500">May 22, 2024</p>

@@ -17,51 +17,52 @@
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
             <div>
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="{{ asset('assets/images/imgnotfound.jpg') }}" alt="">
+                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="{{ asset('assets/images/softwaredev.jpg') }}" alt="">
 
                 <div class="mt-8">
-                    <span class="text-blue-500 uppercase">Environment</span>
+                    <span class="text-blue-500 uppercase">Information Technology</span>
 
                     <h1 class="mt-4 text-xl font-semibold text-gray-800">
-                        Proper Ways to Clean Beaches
+                        Software Developer
                     </h1>
 
                     <p class="mt-2 text-gray-500">
-                        How to clean the beach correctly and effectively. Starting from waste sorting, relevant tools, and team coordination.
+                        Design, develop, and maintain software applications and systems. Work primarily involves coding, testing, and debugging software.
                     </p>
 
                     <div class="flex items-center justify-between mt-4">
                         <div>
                             <a href="#" class="text-lg font-medium text-gray-700 hover:underline hover:text-gray-500">
-                                Aurelia Puspita, Marketing Lead
+                                Aurelia Puspita - Microsoft
                             </a>
 
                             <p class="text-sm text-gray-500">May 22, 2024</p>
                         </div>
 
-                        <a href="/training/detail" class="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
+                        <a href="" class="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
                     </div>
 
                 </div>
             </div>
 
             <div>
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="{{ asset('assets/images/imgnotfound.jpg') }}" alt="">
+                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="{{ asset('assets/images/graphicdesign.jpg') }}" alt="">
 
                 <div class="mt-8">
-                    <span class="text-blue-500 uppercase">Technology</span>
+                    <span class="text-blue-500 uppercase">Graphic Design</span>
 
                     <h1 class="mt-4 text-xl font-semibold text-gray-800">
-                        Getting Started with OceanPals</h1>
+                        Graphic Designer
+                    </h1>
 
                     <p class="mt-2 text-gray-500">
-                        How to use this application “OceanPals” to find volunteer activities that are suitable for you and maximize community contribution
+                        Create visual concepts using computer software to communicate ideas that inspire, inform, or captivate consumers.
                     </p>
 
                     <div class="flex items-center justify-between mt-4">
                         <div>
                             <a href="#" class="text-lg font-medium text-gray-700 hover:underline hover:text-gray-500">
-                                Christopher H.G, IT Team
+                                Christopher H.G - Adobe
                             </a>
 
                             <p class="text-sm text-gray-500">April 30, 2024</p>
@@ -74,23 +75,23 @@
             </div>
 
             <div>
-                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="{{ asset('assets/images/imgnotfound.jpg') }}" alt="">
+                <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src="{{ asset('assets/images/contentwriter.jpg') }}" alt="">
 
                 <div class="mt-8">
-                    <span class="text-blue-500 uppercase">Environment</span>
+                    <span class="text-blue-500 uppercase">Writing and Editing</span>
 
                     <h1 class="mt-4 text-xl font-semibold text-gray-800">
-                        Systems of Garbage Sorting
+                        Content Writer
                     </h1>
 
                     <p class="mt-2 text-gray-500">
-                        In-depth understanding of waste sorting systems, starting from organic, inorganic and many other waste categories.
+                        Produce engaging, clear text for different advertising channels such as websites, print ads, and catalogs.
                     </p>
 
                     <div class="flex items-center justify-between mt-4">
                         <div>
                             <a href="#" class="text-lg font-medium text-gray-700 hover:underline hover:text-gray-500">
-                                Stanic Dylan, EO
+                                Stanic Dylan - BuzzFeed
                             </a>
 
                             <p class="text-sm text-gray-500">April 19, 2024</p>
