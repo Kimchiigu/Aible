@@ -12,8 +12,8 @@ import base64
 app = Flask(__name__)
 cors = CORS(app, resources={r"/process_frame": {"origins": "*", "methods": ["POST"], "headers": "Content-Type"}})
 
-api_url = "https://aibletests2.cognitiveservices.azure.com/customvision/v3.0/Prediction/d5de92a2-86fe-4b2a-a30d-fb8ac87ec2d4/classify/iterations/Iteration3/image"
-api_key = "d40a83f78b1c48adae9c05bd37f8f6d5"
+api_url = "https://eastus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/d5de92a2-86fe-4b2a-a30d-fb8ac87ec2d4/classify/iterations/Iteration4/image"
+api_key = "99aa08b38969472e9dd536cbddfa2551"
 
 api_in_progress = False
 
@@ -99,9 +99,14 @@ def classify_image(image_data, result_queue):
         "Content-Type": "application/octet-stream"
     }
 
+
     response = requests.post(api_url, headers=headers, data=image_data)
 
     result = response.json()
+    prediction = max(result["predictions"], key=lambda x: x["probability"])
+    label = prediction["tagName"]
+    image = cv2.imdecode(np.frombuffer(image_data, np.uint8), -1)
+    cv2.imwrite(f'{label}_{time.time()}.jpg', image)
 
     api_in_progress = False
     result_queue.put(result)
