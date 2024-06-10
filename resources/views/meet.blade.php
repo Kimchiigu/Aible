@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webcam Capture</title>
     @vite('resources/css/app.css')
-
+    <style>
+        .transcript-line {
+            display: inline;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
     <div class="text-center">
@@ -17,13 +21,18 @@
             <h1 class="text-3xl font-bold mb-2">Subtitles: AIBLE</h1>
             <p id="label" class="text-4xl font-bold text-gray-800"></p>
         </div>
-
+        <div class="transcript">
+            <button id="startButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">Start Listening</button>
+            <button id="stopButton" class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">Stop Listening</button>
+            <div id="transcript"></div>
+        </div>
         <div class="mt-8 flex justify-center">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">Mute</button>
             <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2">Close Video</button>
             <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-2">Chat</button>
-        </div>
-    </div>
+            </div>
+            </div>
+            <script src="{{ asset('javascript/speechtotext.js') }}"></script>
     <script>
         // Function to initialize webcam feed
         function initializeWebcam() {
