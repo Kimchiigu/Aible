@@ -12,5 +12,11 @@
         "postcss": "^8.4.38",
         "tailwindcss": "^3.4.3",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "openai": "^4.49.1"
     }
 }
