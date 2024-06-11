@@ -85,15 +85,15 @@
         <label><input type="checkbox" name="day" value="Sunday"> Sunday</label>
     </div> --}}
     <div id="tasks">
-        <div class="task-container">
-            <input type="text" class="task-input" placeholder="Enter task">
-            <input type="text" class="task-priority" placeholder="Priority">
-            <input type="date" class="task-deadlin  e" placeholder="Deadline">
-            <input type="number" class="task-workload" placeholder="Workload">
-            <button class="remove-task-button">Remove Task</button>
+        <div class="task-container flex flex-row gap-3">
+            <input type="text" class="task-input" style="border:1px solid black; padding:3px; border-radius:3px; width: 200px" placeholder="Enter task">
+            <input type="text" class="task-priority" style="border:1px solid black; padding:3px; border-radius:3px; width: 200px"placeholder="Priority">
+            <input type="date" class="task-deadline" style="border:1px solid black; padding:3px; border-radius:3px; width: 200px" placeholder="Deadline">
+            <input type="number" class="task-workload" style="border:1px solid black; padding:3px; border-radius:3px; width: 200px" placeholder="Workload">
+            <button class="remove-task-button focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Remove Task</button>
         </div>
     </div>
-    <button id="add-task-button">Add More Task</button>
-    <button id="task-maker">Help Me</button>
+    <button id="add-task-button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add More Task</button>
+    <button id="task-maker" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-0 dark:focus:ring-yellow-900">Help Me</button>
     <script src="{{ asset('javascript/taskmanager.js') }}"></script>
 @endsection
