@@ -59,6 +59,26 @@ app.post("/chat-bot", async (req, res) => {
     }
 });
 
+app.post("/task-manager", async (req, res) => {
+    const { content } = req.body;
+
+    const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment });
+
+    try {
+        const result = await client.chat.completions.create({
+            messages: content,
+            model: "gpt-4",
+        });
+
+        const responseContent = result.choices[0].message.content;
+
+        res.json(responseContent);
+    } catch (error) {
+        console.error("Error generating resume:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 function parseResumeData(content) {
     const lines = content.trim().split('\n');
     const data = {

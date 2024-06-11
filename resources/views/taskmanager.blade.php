@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List with Days of the Week</title>
+    <title>Task List with Calendar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+        }
+        .calendar {
+            margin-bottom: 20px;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .calendar-header button {
+            cursor: pointer;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        .calendar-grid div {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
         }
         .task-container {
             margin-bottom: 10px;
@@ -30,6 +51,14 @@
 </head>
 <body>
     <h1>Task List</h1>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prev-month">Prev</button>
+            <h2 id="calendar-month-year"></h2>
+            <button id="next-month">Next</button>
+        </div>
+        <div class="calendar-grid" id="calendar-grid"></div>
+    </div>
     <div class="days-checkboxes">
         <label><input type="checkbox" name="day" value="Monday"> Monday</label>
         <label><input type="checkbox" name="day" value="Tuesday"> Tuesday</label>
@@ -49,8 +78,57 @@
         </div>
     </div>
     <button id="add-task-button">Add More Task</button>
+    <button id="print-tasks-button">Print All Tasks</button>
 
     <script>
+        const calendarGrid = document.getElementById('calendar-grid');
+        const calendarMonthYear = document.getElementById('calendar-month-year');
+        const prevMonthButton = document.getElementById('prev-month');
+        const nextMonthButton = document.getElementById('next-month');
+
+        let currentDate = new Date();
+
+        function renderCalendar(date) {
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const firstDay = new Date(year, month, 1).getDay();
+            const lastDate = new Date(year, month + 1, 0).getDate();
+
+            calendarMonthYear.textContent = `${date.toLocaleString('default', { month: 'long' })} ${year}`;
+            calendarGrid.innerHTML = '';
+
+            const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            daysOfWeek.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.textContent = day;
+                dayElement.style.fontWeight = 'bold';
+                calendarGrid.appendChild(dayElement);
+            });
+
+            for (let i = 0; i < firstDay; i++) {
+                const emptyElement = document.createElement('div');
+                calendarGrid.appendChild(emptyElement);
+            }
+
+            for (let date = 1; date <= lastDate; date++) {
+                const dateElement = document.createElement('div');
+                dateElement.textContent = date;
+                calendarGrid.appendChild(dateElement);
+            }
+        }
+
+        prevMonthButton.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar(currentDate);
+        });
+
+        nextMonthButton.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar(currentDate);
+        });
+
+        renderCalendar(currentDate);
+
         document.getElementById('add-task-button').addEventListener('click', function() {
             var taskContainer = document.createElement('div');
             taskContainer.className = 'task-container';
@@ -90,6 +168,27 @@
             taskContainer.appendChild(removeTaskButton);
 
             document.getElementById('tasks').appendChild(taskContainer);
+        });
+
+        document.getElementById('print-tasks-button').addEventListener('click', function() {
+            const taskContainers = document.querySelectorAll('.task-container');
+            const tasks = [];
+
+            taskContainers.forEach(container => {
+                const taskInput = container.querySelector('.task-input').value;
+                const taskPriority = container.querySelector('.task-priority').value;
+                const taskDeadline = container.querySelector('.task-deadline').value;
+                const taskWorkload = container.querySelector('.task-workload').value;
+
+                tasks.push({
+                    task: taskInput,
+                    priority: taskPriority,
+                    deadline: taskDeadline,
+                    workload: taskWorkload
+                });
+            });
+
+            console.log(tasks);
         });
 
         document.querySelectorAll('.remove-task-button').forEach(button => {
