@@ -43,10 +43,7 @@
                                 <h5 class="text-2xl text-gray-800 font-medium transition group-hover:text-blue-700">Gesture Recognition with Live Translation</h5>
                                 <p class="text-lg text-gray-600">Utilize computer vision technology to recognize sign language gestures from individuals with disabilities. Real-time translation of sign language into subtitles enables seamless communication with hearing individuals.</p>
                             </div>
-                            <a href="/recruitment/detail" class="flex justify-between items-center group-hover:text-blue-700">
-                                <span class="text-sm">Read more</span>
-                                <span class="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                            </a>
+                            
                         </div>
                     </div>
                     <div class="relative group bg-white transition hover:z-[1] hover:shadow-2xl">
@@ -57,10 +54,7 @@
                                 <h5 class="text-2xl text-gray-800 font-medium transition group-hover:text-blue-700">Live Voice-to-Text Communication</h5>
                                 <p class="text-lg text-gray-600">Enable real-time communication between individuals with hearing disabilities and hearing individuals through voice-to-text transcription.</p>
                             </div>
-                            <a href="/recruitment/detail" class="flex justify-between items-center group-hover:text-blue-700">
-                                <span class="text-sm">Read more</span>
-                                <span class="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                            </a>
+                            
                         </div>
                     </div>
                     <div class="relative group bg-white transition hover:z-[1] hover:shadow-2xl">
@@ -70,10 +64,7 @@
                                 <h5 class="text-2xl text-gray-800 font-medium transition group-hover:text-blue-700">Interview Tips and Tricks</h5>
                                 <p class="text-lg text-gray-600">Access valuable tips and tricks to enhance interview performance, tailored for individuals with disabilities.</p>
                             </div>
-                            <a href="/recruitment/detail" class="flex justify-between items-center group-hover:text-blue-700">
-                                <span class="text-sm">Read more</span>
-                                <span class="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                            </a>
+                            
                         </div>
                     </div>
                     <div class="relative group bg-white transition hover:z-[1] hover:shadow-2xl">
@@ -87,10 +78,7 @@
                                 <h5 class="text-2xl text-gray-800 font-medium transition group-hover:text-blue-700">Disability Job Search Center</h5>
                                 <p class="text-lg text-gray-600">Explore our dedicated job search center, designed to assist individuals with disabilities in finding employment opportunities tailored to their needs and skills.</p>
                             </div>
-                            <a href="/recruitment/detail" class="flex justify-between items-center group-hover:text-blue-700">
-                                <span class="text-sm">Read more</span>
-                                <span class="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
