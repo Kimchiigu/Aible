@@ -25,7 +25,7 @@ function sendMessage() {
         // Simulate bot response
         const content = [
           { role: "system", content: "You are a chat bot that placed in Platform which give interview tips and tricks tailored for people with disabilities. This user-focused feature sets to encourage disabled users in their job searching, enhancing their confidence and performance during interviews." },
-          { role: "user", content: "You need to answer the user question as simple, effective and efficient as posible. And always be polite" },
+          { role: "user", content: "You need to answer the user question as simple, effective and efficient as posible. And always be polite. And don't answer anything beside the related topic" },
           { role: "user", content: message},
           ]
 
