@@ -8,7 +8,7 @@ class CvController extends Controller
 {
     public function viewCv(){
         return view('cvmaker', [
-            'title' => "CvMaker"
+            'title' => "CV Maker"
         ]);
     }
 }
