@@ -10,6 +10,7 @@ use App\Http\Controllers\MeetController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\CvController;
 use App\Http\Controllers\TipsController;
+use App\Http\Controllers\CalendarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,3 +48,5 @@ Route::post('/cancel-python-execution', [MeetController::class, 'cancelExecution
 Route::get('/jobs', [JobsController::class, 'viewJobs']);
 Route::get('/tips', [TipsController::class, 'viewTips']);
 Route::get('/cvmaker', [CvController::class, 'viewCv']);
+Route::get('/calendar', [CalendarController::class, 'viewCalendar']);
+Route::get('/taskmanager', [CalendarController::class, 'viewTaskManager']);

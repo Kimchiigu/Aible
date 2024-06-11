@@ -1,6 +1,76 @@
 @extends('layouts.main_layout')
 
 @section('container')
+<style>
+    .gsc-search-button{
+        border-radius: 20px;
+    }
+
+    .gs-webResult{
+        /* width: 50%; */
+    }
+
+    .gsc-result{
+        width: 30%;
+    }
+
+    .gsc-webResult{
+        /* width: 50%; */
+    }
+
+    .gsc-expansionArea{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .gsc-webResult {
+            border: 1px solid #e5e7eb; /* border-gray-200 */
+            padding: 16px;
+            border-radius: 0.5rem; /* rounded-lg */
+            margin-top: 16px;
+        }
+
+        .gs-title a {
+            font-size: 1rem; /* text-base */
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .gs-title a:hover {
+            text-decoration: underline;
+            color: #3b82f6; /* text-blue-500 */
+        }
+
+        .gs-visibleUrl-short,
+        .gs-visibleUrl-long {
+            font-size: 0.875rem; /* text-sm */
+            color: #6b7280; /* text-gray-500 */
+            margin-top: 4px;
+            word-break: break-all;
+        }
+
+        .gs-snippet {
+            margin-top: 8px;
+            color: #6b7280; /* text-gray-500 */
+        }
+        .gsc-result-info{
+            display: none;
+        }
+        .gsc-orderby{
+            display: none;
+        }
+        .gcsc-find-more-on-google{
+            display: none;
+        }
+        .gsc-cursor-box{
+            display: none;
+        }
+        .gs-snippet{
+            color: #6b7280;
+        }
+</style>
 <section class="bg-white">
     <div class="container px-6 py-10 mx-auto">
         <div class="flex items-center justify-between">
@@ -103,5 +173,10 @@
             </div>
         </div>
     </div>
+    <h3 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl" style="margin-left: 15px">Search other jobs</h3>
+    <hr style="margin-left:15px">
+    <script async src="https://cse.google.com/cse.js?cx=24bf15874667c42f2">
+    </script>
+    <div class="gcse-search"></div>
 </section>
 @endsection
