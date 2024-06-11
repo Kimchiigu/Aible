@@ -6,76 +6,41 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .calendar {
-            margin-bottom: 20px;
-        }
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .calendar-header button {
-            cursor: pointer;
-        }
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-        }
-        .calendar-grid div {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-        .task-container {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .task-input, .task-priority, .task-deadline, .task-workload {
-            margin-right: 10px;
-        }
-        .days-checkboxes label {
-            margin-right: 10px;
-        }
-        #tasks {
-            margin-top: 20px;
-        }
-        .remove-task-button {
-            margin-left: 10px;
-        }
     </style>
 
+    <h1 class="text-2xl font-bold mb-4">Task List</h1>
+    
+    <div class="calendar mb-4">
+        <div class="calendar-header flex justify-between items-center mb-2">
+            <button id="prev-month" class="bg-blue-500 text-white py-1 px-3 rounded">Prev</button>
+            <h2 id="calendar-month-year" class="text-xl font-semibold"></h2>
+            <button id="next-month" class="bg-blue-500 text-white py-1 px-3 rounded">Next</button>
+        </div>
+        <div class="calendar-grid grid grid-cols-7 gap-1" id="calendar-grid"></div>
+    </div>
 
-    <h1>Task List</h1>
-    <div class="calendar">
-        <div class="calendar-header">
-            <button id="prev-month">Prev</button>
-            <h2 id="calendar-month-year"></h2>
-            <button id="next-month">Next</button>
-        </div>
-        <div class="calendar-grid" id="calendar-grid"></div>
+    <div class="days-checkboxes mb-4">
+        <label class="mr-2"><input type="checkbox" name="day" value="Monday" class="mr-1"> Monday</label>
+        <label class="mr-2"><input type="checkbox" name="day" value="Tuesday" class="mr-1"> Tuesday</label>
+        <label class="mr-2"><input type="checkbox" name="day" value="Wednesday" class="mr-1"> Wednesday</label>
+        <label class="mr-2"><input type="checkbox" name="day" value="Thursday" class="mr-1"> Thursday</label>
+        <label class="mr-2"><input type="checkbox" name="day" value="Friday" class="mr-1"> Friday</label>
+        <label class="mr-2"><input type="checkbox" name="day" value="Saturday" class="mr-1"> Saturday</label>
+        <label class="mr-2"><input type="checkbox" name="day" value="Sunday" class="mr-1"> Sunday</label>
     </div>
-    <div class="days-checkboxes">
-        <label><input type="checkbox" name="day" value="Monday"> Monday</label>
-        <label><input type="checkbox" name="day" value="Tuesday"> Tuesday</label>
-        <label><input type="checkbox" name="day" value="Wednesday"> Wednesday</label>
-        <label><input type="checkbox" name="day" value="Thursday"> Thursday</label>
-        <label><input type="checkbox" name="day" value="Friday"> Friday</label>
-        <label><input type="checkbox" name="day" value="Saturday"> Saturday</label>
-        <label><input type="checkbox" name="day" value="Sunday"> Sunday</label>
-    </div>
-    <div id="tasks">
-        <div class="task-container">
-            <input type="text" class="task-input" placeholder="Enter task">
-            <input type="text" class="task-priority" placeholder="Priority">
-            <input type="date" class="task-deadline" placeholder="Deadline">
-            <input type="number" class="task-workload" placeholder="Workload">
-            <button class="remove-task-button">Remove Task</button>
+
+    <div id="tasks" class="space-y-2">
+        <div class="task-container flex items-center space-x-2">
+            <input type="text" class="task-input border border-gray-300 p-2 rounded" placeholder="Enter task">
+            <input type="text" class="task-priority border border-gray-300 p-2 rounded" placeholder="Priority">
+            <input type="date" class="task-deadline border border-gray-300 p-2 rounded" placeholder="Deadline">
+            <input type="number" class="task-workload border border-gray-300 p-2 rounded" placeholder="Workload">
+            <button class="remove-task-button bg-red-500 text-white py-1 px-3 rounded">Remove Task</button>
         </div>
     </div>
-    <button id="add-task-button">Add More Task</button>
-    <button id="print-tasks-button">Print All Tasks</button>
+
+    <button id="add-task-button" class="bg-green-500 text-white py-2 px-4 rounded mt-4">Add More Task</button>
+    <button id="print-tasks-button" class="bg-blue-500 text-white py-2 px-4 rounded mt-4 ml-2">Print All Tasks</button>
 
     <script>
         const calendarGrid = document.getElementById('calendar-grid');
@@ -98,7 +63,7 @@
             daysOfWeek.forEach(day => {
                 const dayElement = document.createElement('div');
                 dayElement.textContent = day;
-                dayElement.style.fontWeight = 'bold';
+                dayElement.classList.add('font-bold');
                 calendarGrid.appendChild(dayElement);
             });
 
@@ -110,6 +75,7 @@
             for (let date = 1; date <= lastDate; date++) {
                 const dateElement = document.createElement('div');
                 dateElement.textContent = date;
+                dateElement.classList.add('text-center', 'p-2', 'border', 'border-gray-300');
                 calendarGrid.appendChild(dateElement);
             }
         }
@@ -128,30 +94,30 @@
 
         document.getElementById('add-task-button').addEventListener('click', function() {
             var taskContainer = document.createElement('div');
-            taskContainer.className = 'task-container';
+            taskContainer.className = 'task-container flex items-center space-x-2 mb-2';
 
             var taskInput = document.createElement('input');
             taskInput.type = 'text';
-            taskInput.className = 'task-input';
+            taskInput.className = 'task-input border border-gray-300 p-2 rounded';
             taskInput.placeholder = 'Enter task';
 
             var taskPriority = document.createElement('input');
             taskPriority.type = 'text';
-            taskPriority.className = 'task-priority';
+            taskPriority.className = 'task-priority border border-gray-300 p-2 rounded';
             taskPriority.placeholder = 'Priority';
 
             var taskDeadline = document.createElement('input');
             taskDeadline.type = 'date';
-            taskDeadline.className = 'task-deadline';
+            taskDeadline.className = 'task-deadline border border-gray-300 p-2 rounded';
             taskDeadline.placeholder = 'Deadline';
 
             var taskWorkload = document.createElement('input');
             taskWorkload.type = 'number';
-            taskWorkload.className = 'task-workload';
+            taskWorkload.className = 'task-workload border border-gray-300 p-2 rounded';
             taskWorkload.placeholder = 'Workload';
 
             var removeTaskButton = document.createElement('button');
-            removeTaskButton.className = 'remove-task-button';
+            removeTaskButton.className = 'remove-task-button bg-red-500 text-white py-1 px-3 rounded';
             removeTaskButton.textContent = 'Remove Task';
 
             removeTaskButton.addEventListener('click', function() {
