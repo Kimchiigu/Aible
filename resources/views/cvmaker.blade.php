@@ -1,22 +1,25 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Resume</title> --}}
+@extends('layouts/main_layout')
+@section('container')
     <style>
-    body {
+    /* body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         color: #333;
         margin: 0;
         padding: 0;
-    }
+    } */
 
     #container {
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
+        display: none;
     }
 
     header {
@@ -99,8 +102,8 @@
         background-color: #2ecc71;
     }
 </style>
-</head>
-<body>
+{{-- </head>
+<body> --}}
     <div id="container">
         <header>
             <h1 id="name-text">
@@ -134,15 +137,18 @@
     </div>
     <label for="input">Input your story here: </label>
     <textarea name="story" id="story"></textarea>
-    <button id="submit">Generate CV</button>
-    <button type="button" onclick="startSpeechRecognition()">Start Speaking</button><br><br>
-
-    <button id="download-button">Download CV</button>
+    <div class="flex flex-row gap-3">
+        <button id="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Generate CV</button>
+        <button type="button" class="focus:outline-none text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900" onclick="startSpeechRecognition()">Start Speaking</button>
+        <button id="download-button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Download CV</button>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script src="{{ asset('javascript/cvmaker.js') }}"></script>
 
     <script>
+        const cvcontainer = document.getElementById('container')
+
         function startSpeechRecognition() {
             if ('webkitSpeechRecognition' in window) {
                 const recognition = new webkitSpeechRecognition();
@@ -178,5 +184,6 @@
             html2pdf().from(element).save();
         });
     </script>
-</body>
-</html>
+{{-- </body>
+</html> --}}
+@endsection
