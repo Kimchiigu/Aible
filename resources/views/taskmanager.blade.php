@@ -90,7 +90,7 @@
         <label><input type="checkbox" name="day" value="Sunday"> Sunday</label>
     </div> --}}
     <div id="tasks">
-        <div class="task-container flex flex-row gap-3">
+        <div class="task-container flex flex-row ">
             <input type="text" class="task-input" style="border:1px solid black; padding:3px; border-radius:3px; width: 200px" placeholder="Enter task">
             <input type="text" class="task-priority" style="border:1px solid black; padding:3px; border-radius:3px; width: 200px"placeholder="Priority">
             <input type="date" class="task-deadline" style="border:1px solid black; padding:3px; border-radius:3px; width: 200px" placeholder="Deadline">
