@@ -2,10 +2,10 @@
 
 @section('container')
     <style>
-        body {
+        /* body {
             font-family: Arial, sans-serif;
             margin: 20px;
-        }
+        } */
         .calendar {
             margin-bottom: 20px;
             width: 75%;
@@ -65,7 +65,7 @@
             margin-left: 10px;
             background-color: rgb(255, 48, 48);
             color: white;
-            border-radius: 30px;
+            border-radius: 7px;
             padding: 10px;
         }
     </style>
