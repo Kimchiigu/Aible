@@ -106,15 +106,15 @@
 <body> --}}
     <div id="container">
         <header>
-            <h1 id="name-text">
+            <h1 id="name-text" class="text-2xl">
             </h1>
             <p id="contact-text">
             </p>
         </header>
 
-        <section id="summary">
+        <section id="summary" class="mb-10">
             <h2>Professional Summary</h2>
-            <p id="summary-text">
+            <p id="summary-text" class="">
             </p>
         </section>
 
