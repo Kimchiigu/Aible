@@ -53,6 +53,7 @@
         }
         .task-input, .task-priority, .task-deadline, .task-workload {
             margin-right: 10px;
+            border:1px solid black; padding:3px; border-radius:3px; width: 200px
         }
         .days-checkboxes label {
             margin-right: 10px;
@@ -62,6 +63,10 @@
         }
         .remove-task-button {
             margin-left: 10px;
+            background-color: rgb(255, 48, 48);
+            color: white;
+            border-radius: 30px;
+            padding: 10px;
         }
     </style>
 </head>
