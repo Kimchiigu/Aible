@@ -133,8 +133,9 @@
             <h2>Education</h2>
             <p id="education-text"></p>
         </section>
-        <div id="error-msg"></div>
+
     </div>
+    <div id="error-msg"></div>
     <label for="input">Input your story here: </label>
     <textarea name="story" id="story"></textarea>
     <div class="flex flex-row gap-3">
