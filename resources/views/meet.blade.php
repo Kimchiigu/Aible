@@ -18,7 +18,7 @@
         <canvas id="canvas" class="hidden border-s-amber-500"></canvas>
 
         <div class="mt-8">
-            <h1 class="text-3xl font-bold mb-2">Subtitles: AIBLE</h1>
+            <h1 class="text-3xl font-bold mb-2">Subtitles</h1>
             <p id="label" class="text-4xl font-bold text-gray-800"></p>
         </div>
         <div class="transcript">
